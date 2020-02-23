@@ -46,8 +46,8 @@ for nchains, fnames in zip(
     fig.savefig("mem_usage_{}chains.png".format(nchains))
 
 labels = ['2', '4', '6', '10', '15']
-x = np.arange(len(labels))  # the label locations
-width = 0.35  # the width of the bars
+x = np.arange(len(labels))
+width = 0.35
 
 fig1, ax1 = plt.subplots(1, 2, figsize=(16, 9))
 data_pre = ax1[0].bar(x - width/2, max_mem_pre_list, width, label="Preallocation")
@@ -65,13 +65,3 @@ ax1[1].set_title("Maximum memory usage difference vs Chains")
 ax1[1].legend(loc=2)
 
 fig1.savefig("summary.png")
-
-#df_20 = read_mem_file(chains_20[1])
-#fig, ax = plt.subplots()
-#ax.plot(df_20.time, df_20.mem, label="Preallocation")
-#ax.set_title(r"$N_{chains}=20$")
-#ax.legend()
-#fig.savefig("mem_usage_20_chains.png")
-
-
-
