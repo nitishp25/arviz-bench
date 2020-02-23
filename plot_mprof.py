@@ -57,12 +57,16 @@ data_no = ax1[0].bar(x + width/2, max_mem_no_list, width, label="No Preallocatio
 ax1[0].set_xlabel('Chains')
 ax1[0].set_ylabel('Max Memory Usage (MiB)')
 ax1[0].set_title("Maximum memory usage vs Chains")
+ax1[0].set_xticks(x)
+ax1[0].set_xticklabels(labels)
 ax1[0].legend()
 
 data_diff = ax1[1].bar(x, mem_diff_list, width, label="Max Memory Difference")
 ax1[1].set_xlabel('Chains')
 ax1[1].set_ylabel('Max Memory Usage Difference (MiB)')
 ax1[1].set_title("Maximum memory usage difference vs Chains")
+ax1[1].set_xticks(x)
+ax1[1].set_xticklabels(labels)
 ax1[1].legend(loc=2)
 
-fig1.savefig("summary.png")
+fig1.savefig("summary1.png")
